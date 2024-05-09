@@ -9,11 +9,6 @@ const getInviteCounts = async (guild) => {
     return new Map(guild.invites.cache.map(invite => [invite.code, invite.uses]));
 };
 
-client.once('ready', async () => {
-    console.log('Bot is online!');
-	console.log('Code by Wick Studio!');
-	console.log('discord.gg/wicks');
-
     // Load all server invites
     for (const [guildId, guild] of client.guilds.cache) {
         try {
